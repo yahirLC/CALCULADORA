@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
     android:orientation="vertical"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
+
 
     <TextView
         android:id="@+id/tvtemp"
@@ -13,7 +18,6 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_bold"
         android:padding="10dp"
-        android:text="0"
         android:textAlignment="textEnd"
         android:textColor="#4C4A4A"
         android:textSize="32sp" />
@@ -24,7 +28,6 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_bold"
         android:padding="10dp"
-        android:text="0"
         android:textAlignment="textEnd"
         android:textColor="#000000"
         android:textSize="60sp" />
@@ -33,4 +36,12 @@
         layout="@layout/buttons_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/ButtonAcerca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#2E7D32"
+        android:text="Acerca"
+        app:cornerRadius="0dp" />
 </LinearLayout>
