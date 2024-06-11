@@ -35,41 +35,42 @@ class MainActivity : AppCompatActivity() {
         tvtemp = findViewById(R.id.tvtemp)
         tvresultado = findViewById(R.id.tvresultado)
 
-        fun CAMBIAOPERADOR(b: View){
-            val boton:Button = b as Button
-            if (boton.text.toString().trim() == "x"){
-                OPERACION = "*"
-            }else{
-                OPERACION = boton.text.toString().trim()
-            }
+
     }
-        fun CALCULAR(b:View){
-            if (Double.NaN != PRIMERO) {
-                SEGUNDO = tvtemp.text.toString().toDouble()
-                tvtemp.text = ""
+    fun CAMBIAOPERADOR(b: View){
+        val boton:Button = b as Button
+        if (boton.text.toString().trim() == "x"){
+            OPERACION = "*"
+        }else{
+            OPERACION = boton.text.toString().trim()
+        }
+    }
+    fun CALCULAR(b:View){
+        if (Double.NaN != PRIMERO) {
+            SEGUNDO = tvtemp.text.toString().toDouble()
+            tvtemp.text = ""
 
-                when (OPERACION) {
-                    "+" -> PRIMERO = (PRIMERO + SEGUNDO)
-                    "-" -> PRIMERO = (PRIMERO - SEGUNDO)
-                    "*" -> PRIMERO = (PRIMERO * SEGUNDO)
-                    "/" -> PRIMERO = (PRIMERO / SEGUNDO)
-                    "%" -> PRIMERO = (PRIMERO % SEGUNDO)
-                }
-            }else{
-
-                PRIMERO = tvtemp.text.toString().toDouble()
+            when (OPERACION) {
+                "+" -> PRIMERO = (PRIMERO + SEGUNDO)
+                "-" -> PRIMERO = (PRIMERO - SEGUNDO)
+                "*" -> PRIMERO = (PRIMERO * SEGUNDO)
+                "/" -> PRIMERO = (PRIMERO / SEGUNDO)
+                "%" -> PRIMERO = (PRIMERO % SEGUNDO)
             }
+        }else{
 
-
-
+            PRIMERO = tvtemp.text.toString().toDouble()
         }
 
-        fun SELECCIONARNUM(b: View){
-            val boton:Button = b as Button
-            if (tvtemp.text.toString() == "0"){
-                tvtemp.text = ""
-            }
-            tvtemp.text = tvtemp.text.toString() + boton.text.toString()
+
+
+    }
+
+    fun SELECCIONARNUM(b: View){
+        val boton:Button = b as Button
+        if (tvtemp.text.toString() == "0"){
+            tvtemp.text = ""
         }
+        tvtemp.text = tvtemp.text.toString() + boton.text.toString()
     }
 }
