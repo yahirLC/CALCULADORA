@@ -37,11 +37,4 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/ButtonAcerca"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#2E7D32"
-        android:text="Acerca"
-        app:cornerRadius="0dp" />
 </LinearLayout>

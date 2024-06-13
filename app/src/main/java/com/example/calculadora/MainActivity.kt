@@ -7,18 +7,11 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 
 import java.text.DecimalFormat
-import java.time.temporal.IsoFields
-import java.time.temporal.Temporal
 
 class MainActivity : AppCompatActivity() {
-
-    val SUMA = "+"
-    val RESTA = "-"
-    val MULTIPLICACION = "*"
-    val DIVISION = "/"
-    val PORCENTAJE = "%"
 
     var OPERACION = ""
 
@@ -40,6 +33,18 @@ class MainActivity : AppCompatActivity() {
         tvresultado = findViewById(R.id.tvresultado)
 
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu,menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.about -> Toast.makeText(this,"Sobre Quien",Toast.LENGTH_SHORT).show()
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     fun CAMBIAOPERADOR(b: View){
